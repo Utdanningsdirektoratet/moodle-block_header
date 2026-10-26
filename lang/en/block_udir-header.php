@@ -23,7 +23,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Udir Header block';
 $string['pluginname'] = 'Udir Header';
 $string['pluginname:addinstance'] = 'Add a new Udir Header block';
 $string['pluginname:myaddinstance'] = 'Add a new Udir Header block to the My Moodle page';
