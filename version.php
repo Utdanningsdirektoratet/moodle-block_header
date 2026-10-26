@@ -25,8 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = TODO;
-$plugin->requires = TODO;
+$plugin->version = 2026102600;
 $plugin->component = 'block_udir-header';
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = 'TODO';
+$plugin->release = 'v0.1.0-prealpha';
