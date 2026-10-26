@@ -1,0 +1,15 @@
+{{!
+    @template block_udir-header/content
+
+    Hero block content template.
+
+    Example context (json):
+    {
+        "title": "Welcome to the Course Portal"
+    }
+}}
+<div class="block-udir-header">
+    {{#title}}
+        <h2 class="udir-header-title">{{title}}</h2>
+    {{/title}}
+</div>

@@ -49,8 +49,9 @@ class block_udir-header extends block_base {
         $this->content = new stdClass();
         $this->content->footer = '';
 
-        // Add logic here to define your template data or any other content.
-        $data = ['YOUR DATA GOES HERE'];
+        $data = [
+            'title' => !empty($this->config->text) ? $this->config->text : 'Default Udir Header Title'
+        ];
 
         $this->content->text = $OUTPUT->render_from_template('block_udir-header/content', $data);
 
