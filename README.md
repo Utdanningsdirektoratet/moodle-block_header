@@ -16,6 +16,11 @@ The Directorate was established on June 15, 2004, and reports to the Ministry of
 
 TBD..
 
+```
+1. Boost Union theme needs to be installed.
+2. When the plugin has been installed, it's important to go into `/admin/category.php?category=theme_boost_union` and select _"Outside (top)"_ in the _"Additional block regions for 'Dashboard' layout"_-section.
+```
+
 ## 🗺 Want to contribute?
 
 Found a bug that you want to inform us about, send in an [issue](https://github.com/Utdanningsdirektoratet/moodle-block_header/issues)!
