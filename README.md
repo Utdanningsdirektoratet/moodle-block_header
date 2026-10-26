@@ -1,4 +1,4 @@
-# moodle-block_udir-header - A block plugin
+# moodle-block_header - A block plugin
 
 ## ❓ About
 
@@ -18,9 +18,9 @@ TBD..
 
 ## 🗺 Want to contribute?
 
-Found a bug that you want to inform us about, send in an [issue](https://github.com/Utdanningsdirektoratet/moodle-block_udir-header/issues)!
+Found a bug that you want to inform us about, send in an [issue](https://github.com/Utdanningsdirektoratet/moodle-block_header/issues)!
 
-Got a PR ready for an existing issue, feel free to [send it in](https://github.com/Utdanningsdirektoratet/moodle-block_udir-header/pulls) for us to check out.
+Got a PR ready for an existing issue, feel free to [send it in](https://github.com/Utdanningsdirektoratet/moodle-block_header/pulls) for us to check out.
 
 ## 📜 License
 

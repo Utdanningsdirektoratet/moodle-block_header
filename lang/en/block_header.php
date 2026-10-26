@@ -15,15 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Languages configuration for the block_udir-header plugin.
+ * Languages configuration for the block_header plugin.
  *
- * @package   block_udir-header
+ * @package   block_header
  * @copyright 2026 Utdanningsdirektoratet https://udir.no
  * @author    Sindre Kjelsrud
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Udir Header';
-$string['pluginname:addinstance'] = 'Add a new Udir Header block';
-$string['pluginname:myaddinstance'] = 'Add a new Udir Header block to the My Moodle page';
+$string['pluginname'] = '[Udir] Header';
+$string['pluginname:addinstance'] = 'Add a new Header block';
+$string['pluginname:myaddinstance'] = 'Add a new Header block to the My Moodle page';
 $string['blocktitle'] = 'Blocktitle';

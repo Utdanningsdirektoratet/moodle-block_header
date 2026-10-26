@@ -15,16 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin capabilities for the block_udir-header plugin.
+ * Plugin capabilities for the block_header plugin.
  *
- * @package   block_udir-header
+ * @package   block_header
  * @copyright 2026 Utdanningsdirektoratet https://udir.no
  * @author    Sindre Kjelsrud
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $capabilities = [
-    'block/udir-header:myaddinstance' => [
+    'block/header:myaddinstance' => [
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => [
@@ -32,7 +32,7 @@ $capabilities = [
         ],
         'clonepermissionsfrom' => 'moodle/my:manageblocks'
     ],
-    'block/udir-header:addinstance' => [
+    'block/header:addinstance' => [
         'riskbitmask' => RISK_SPAM | RISK_XSS,
         'captype' => 'write',
         'contextlevel' => CONTEXT_BLOCK,

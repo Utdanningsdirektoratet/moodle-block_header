@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the block_udir-header plugin.
+ * Version metadata for the block_header plugin.
  *
- * @package   block_udir-header
+ * @package   block_header
  * @copyright 2026 Utdanningsdirektoratet https://udir.no
  * @author    Sindre Kjelsrud
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2026102600;
-$plugin->component = 'block_udir-header';
+$plugin->version = 2026102601;
+$plugin->component = 'block_header';
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->release = 'v0.1.0-prealpha';
+$plugin->release = 'v0.2.0-prealpha';

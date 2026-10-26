@@ -15,20 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Block edit form class for the block_udir-header plugin.
+ * Block edit form class for the block_header plugin.
  *
- * @package   block_udir-header
+ * @package   block_header
  * @copyright 2026 Utdanningsdirektoratet https://udir.no
  * @author    Sindre Kjelsrud
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_udir-header_edit_form extends block_edit_form {
+class block_header_edit_form extends block_edit_form {
     protected function specific_definition($mform) {
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
         // A sample string variable with a default value.
-        $mform->addElement('text', 'config_text', get_string('blocktitle', 'block_udir-header'));
+        $mform->addElement('text', 'config_text', get_string('blocktitle', 'block_header'));
         $mform->setDefault('config_text', 'default value');
         $mform->setType('config_text', PARAM_TEXT);
     }

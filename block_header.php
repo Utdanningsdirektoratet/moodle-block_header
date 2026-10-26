@@ -15,15 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Block definition class for the block_udir-header plugin.
+ * Block definition class for the block_header plugin.
  *
- * @package   block_udir-header
+ * @package   block_header
  * @copyright 2026 Utdanningsdirektoratet https://udir.no
  * @author    Sindre Kjelsrud
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_udir-header extends block_base {
+class block_header extends block_base {
 
     /**
      * Initialises the block.
@@ -31,7 +31,7 @@ class block_udir-header extends block_base {
      * @return void
      */
     public function init() {
-        $this->title = get_string('pluginname', 'block_udir-header');
+        $this->title = get_string('pluginname', 'block_header');
     }
 
     /**
@@ -50,10 +50,10 @@ class block_udir-header extends block_base {
         $this->content->footer = '';
 
         $data = [
-            'title' => !empty($this->config->text) ? $this->config->text : 'Default Udir Header Title'
+            'title' => !empty($this->config->text) ? $this->config->text : 'Default Header Title'
         ];
 
-        $this->content->text = $OUTPUT->render_from_template('block_udir-header/content', $data);
+        $this->content->text = $OUTPUT->render_from_template('block_header/content', $data);
 
         return $this->content;
     }
