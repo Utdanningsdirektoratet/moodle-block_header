@@ -1,0 +1,25 @@
+.block_header.card {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    margin-top: -1.5rem;
+    border: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .block_header.card {
+        margin-left: -0.8rem;
+        margin-right: -0.8rem;
+        margin-top: -0.8rem;
+    }
+}
+
+.block_header .card-body {
+    padding: 0 !important; /* remove existing padding */
+    margin-top: -0.5vh; /* make hero stick to top */
+}
+
+.udir-headerbg {
+    min-height:480px;
+    display:flex;
+    align-items:center;
+}

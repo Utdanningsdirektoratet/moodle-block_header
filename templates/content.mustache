@@ -8,8 +8,18 @@
         "title": "Welcome to the Course Portal"
     }
 }}
-<div class="block-header">
-    {{#title}}
-        <h2 class="header-title">{{title}}</h2>
-    {{/title}}
-</div>
+<section
+    class="text-white position-relative py-5 udir-headerbg"
+    {{#backgroundimage}} style="background: url('{{{backgroundimage}}}') center/cover no-repeat;"
+    {{/backgroundimage}}
+>
+    <!-- Dark overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+    style="background:rgba(0,0,0,0.6);"></div>
+    <!-- Content -->
+    <div class="ml-4 container position-relative">
+        {{#title}}
+            <h1 class="display-5 fw-bold mb-3">{{title}}</h1>
+        {{/title}}
+    </div>
+</section>
