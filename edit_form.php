@@ -27,9 +27,15 @@ class block_header_edit_form extends block_edit_form {
     protected function specific_definition($mform) {
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
-        // A sample string variable with a default value.
-        $mform->addElement('text', 'config_text', get_string('blocktitle', 'block_header'));
-        $mform->setDefault('config_text', 'default value');
-        $mform->setType('config_text', PARAM_TEXT);
+
+        // Header title
+        $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_header'));
+        $mform->setDefault('config_title', 'default value');
+        $mform->setType('config_title', PARAM_TEXT);
+
+        // Header description
+        $mform->addElement('text', 'config_description', get_string('blockdescription', 'block_header'));
+        $mform->setDefault('config_description', 'default value');
+        $mform->setType('config_description', PARAM_TEXT);
     }
 }

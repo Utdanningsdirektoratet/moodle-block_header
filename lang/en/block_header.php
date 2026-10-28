@@ -26,4 +26,5 @@
 $string['pluginname'] = '[Udir] Header';
 $string['pluginname:addinstance'] = 'Add a new Header block';
 $string['pluginname:myaddinstance'] = 'Add a new Header block to the My Moodle page';
-$string['blocktitle'] = 'Blocktitle';
+$string['blocktitle'] = 'Title';
+$string['blockdescription'] = 'Description';

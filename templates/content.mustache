@@ -5,7 +5,8 @@
 
     Example context (json):
     {
-        "title": "Welcome to the Course Portal"
+        "title": "Default Header Title",
+        "description": "Default Header Description",
     }
 }}
 <section
@@ -21,5 +22,8 @@
         {{#title}}
             <h1 class="display-5 fw-bold mb-3">{{title}}</h1>
         {{/title}}
+        {{#description}}
+            <p class="lead mb-4 opacity-90">{{description}}</p>
+        {{/description}}
     </div>
 </section>

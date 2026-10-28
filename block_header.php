@@ -59,7 +59,8 @@ class block_header extends block_base {
         $this->content->footer = '';
 
         $data = [
-            'title' => !empty($this->config->text) ? $this->config->text : 'Default Header Title'
+            'title' => !empty($this->config->title) ? $this->config->title : 'Default Header Title',
+            'description' => !empty($this->config->description) ? $this->config->description : 'Default Header Description',
         ];
 
         $this->content->text = $OUTPUT->render_from_template('block_header/content', $data);
