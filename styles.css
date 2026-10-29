@@ -19,7 +19,7 @@
 
 .block_header .card-body {
     padding: 0 !important; /* remove existing padding */
-    margin-top: -0.5vh; /* make hero stick to top */
+    margin-top: -0.5vh; /* make header stick to top */
 }
 
 .udir-headerbg {
