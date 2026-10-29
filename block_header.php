@@ -65,6 +65,13 @@ class block_header extends block_base {
 
         $this->content->text = $OUTPUT->render_from_template('block_header/content', $data);
 
+        $this->content->text .= '<script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var header = document.getElementById("page-header");
+                if (header) { header.style.display = "none"; }
+            });
+        </script>';
+
         return $this->content;
     }
 
