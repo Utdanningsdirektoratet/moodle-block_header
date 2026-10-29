@@ -34,7 +34,7 @@ class block_header_edit_form extends block_edit_form {
         $mform->setType('config_title', PARAM_TEXT);
 
         // Header description
-        $mform->addElement('text', 'config_description', get_string('blockdescription', 'block_header'));
+        $mform->addElement('textarea', 'config_description', get_string('blockdescription', 'block_header'));
         $mform->setDefault('config_description', 'default value');
         $mform->setType('config_description', PARAM_TEXT);
     }
