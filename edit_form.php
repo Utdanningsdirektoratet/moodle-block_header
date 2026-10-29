@@ -24,6 +24,19 @@
  */
 
 class block_header_edit_form extends block_edit_form {
+    /**
+    * Return filemanager options for the background image.
+    *
+    * @return array
+    */
+    protected function filemanager_options(): array {
+        return [
+            'subdirs' => 0,
+            'maxfiles' => 1,
+            'accepted_types' => ['image'],
+        ];
+    }
+
     protected function specific_definition($mform) {
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
@@ -32,5 +45,38 @@ class block_header_edit_form extends block_edit_form {
         $mform->addElement('textarea', 'config_description', get_string('blockdescription', 'block_header'));
         $mform->setDefault('config_description', 'default value');
         $mform->setType('config_description', PARAM_TEXT);
+
+        // Illustration image
+        $mform->addElement(
+            'filemanager',
+            'config_attachments',
+            get_string('uploadimage', 'block_header'),
+            null,
+            $this->filemanager_options()
+        );
+    }
+
+    /**
+     * Populate the form before it's displayed.
+     *
+     * @param stdClass|array $defaults
+     */
+    public function set_data($defaults) {
+        $itemid = 0; // Itemid for blocks is usually the instance ID
+        $context = context_block::instance($this->block->instance->id);
+
+        $draftitemid = file_get_submitted_draft_itemid('config_attachments');
+        file_prepare_draft_area($draftitemid, $context->id, 'block_header', 'content', 0, $filemanageroptions);
+
+        // Add the draft ID to the data object so the form knows which files to show
+        $defaults->attachments = $draftitemid;
+
+        // Set the draft ID on defaults and block config so it is not overwritten by parent::set_data().
+        $defaults->config_attachments = $draftitemid;
+        if (!empty($this->block->config)) {
+            $this->block->config->attachments = $draftitemid;
+        }
+
+        parent::set_data($defaults);
     }
 }

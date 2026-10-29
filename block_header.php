@@ -58,9 +58,30 @@ class block_header extends block_base {
         $this->content = new stdClass();
         $this->content->footer = '';
 
+        $context = context_block::instance($this->instance->id);
+
+        // fetch the uploaded illustration from storage
+        $illustration = 's';
+        $fs = get_file_storage();
+        $files = $fs->get_area_files($context->id, 'block_header', 'content', 0, 'itemid, filepath, filename', false);
+        foreach ($files as $file) {
+            $url = moodle_url::make_pluginfile_url(
+                $file->get_contextid(),
+                'block_header',
+                'content',
+                $file->get_itemid(),
+                $file->get_filepath(),
+                $file->get_filename(),
+                false // Do not force download of the file.
+            );
+            $illustration = $url->out(false);
+            break;
+        }
+
         $data = [
             'title' => format_string($PAGE->category->name) ?? 'default title',
             'description' => !empty($this->config->description) ? $this->config->description : 'Default Header Description',
+            'illustration' => $illustration
         ];
 
         $this->content->text = $OUTPUT->render_from_template('block_header/content', $data);
@@ -73,6 +94,35 @@ class block_header extends block_base {
         </script>';
 
         return $this->content;
+    }
+
+    public function instance_config_save($data,$nolastupdated = false) {
+        $context = context_block::instance($this->instance->id);
+
+        // Move the file from draft to permanent storage
+        file_save_draft_area_files(
+            $data->attachments,
+            $context->id,
+            'block_header',
+            'content',
+            0, // itemid
+            ['subdirs' => 0, 'maxfiles' => 1]
+        );
+
+        // Call the parent method to the data inside block_instance.configdata.
+        return parent::instance_config_save($data, $nolastupdated);
+    }
+
+    /**
+     * Delete files associated with this block instance when it is deleted.
+     *
+     * @return bool
+     */
+    public function instance_delete() {
+        $fs = get_file_storage();
+        $context = context_block::instance($this->instance->id);
+        $fs->delete_area_files($context->id, 'block_header');
+        return parent::instance_delete();
     }
 
     /**

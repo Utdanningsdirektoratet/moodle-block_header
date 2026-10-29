@@ -7,15 +7,30 @@
     {
         "title": "Default Header Title",
         "description": "Default Header Description",
+        "illustration": "Uploaded via fileupload",
     }
 }}
 <section class="position-relative udir-headerbg">
-    <div class="ml-4 container position-relative">
-        {{#title}}
-            <h1 class="display-5 fw-bold">{{title}}</h1>
-        {{/title}}
-        {{#description}}
-            <p class="lead opacity-90">{{description}}</p>
-        {{/description}}
+    <div class="d-flex ml-4 container position-relative">
+        <div class="flex-grow-1">
+            {{#title}}
+                <h1 class="display-5 fw-bold">{{title}}</h1>
+            {{/title}}
+            {{#description}}
+                <p class="w-75 lead opacity-90">{{description}}</p>
+            {{/description}}
+        </div>
+        <div
+            class="bg-white shadow-sm d-flex align-items-center justify-content-center"
+            style="min-width: 250px; min-height: 150px; border-radius: 8px;"
+        >
+            {{#illustration}}
+                <img src="{{illustration}}" class="img-fluid" alt="Header illustration" />
+            {{/illustration}}
+
+            {{^illustration}}
+                <span class="text-muted opacity-50">No image</span>
+            {{/illustration}}
+        </div>
     </div>
 </section>
