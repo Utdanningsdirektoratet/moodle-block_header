@@ -18,7 +18,7 @@ TBD..
 
 ```
 1. Boost Union theme needs to be installed.
-2. When the plugin has been installed, it's important to go into `/admin/category.php?category=theme_boost_union` and select _"Outside (top)"_ in the _"Additional block regions for 'Dashboard' layout"_-section.
+2. When the plugin has been installed, it's important to go into `/admin/category.php?category=theme_boost_union` and select _"Outside (top)"_ in the _"Additional block regions for 'Course category pages' layout"_-section.
 ```
 
 ## 🗺 Want to contribute?
