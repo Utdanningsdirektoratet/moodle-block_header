@@ -9,21 +9,13 @@
         "description": "Default Header Description",
     }
 }}
-<section
-    class="text-white position-relative py-5 udir-headerbg"
-    {{#backgroundimage}} style="background: url('{{{backgroundimage}}}') center/cover no-repeat;"
-    {{/backgroundimage}}
->
-    <!-- Dark overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100"
-    style="background:rgba(0,0,0,0.6);"></div>
-    <!-- Content -->
+<section class="position-relative udir-headerbg">
     <div class="ml-4 container position-relative">
         {{#title}}
-            <h1 class="display-5 fw-bold mb-3">{{title}}</h1>
+            <h1 class="display-5 fw-bold">{{title}}</h1>
         {{/title}}
         {{#description}}
-            <p class="lead mb-4 opacity-90">{{description}}</p>
+            <p class="lead opacity-90">{{description}}</p>
         {{/description}}
     </div>
 </section>
