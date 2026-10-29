@@ -75,11 +75,7 @@ class block_header extends block_base {
      */
     public function applicable_formats() {
         return [
-            'admin' => false,
-            'site-index' => true,
-            'course-view' => true,
-            'mod' => false,
-            'my' => true,
+            'all' => true
         ];
     }
 }
