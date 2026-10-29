@@ -49,7 +49,7 @@ class block_header extends block_base {
      * @return string The block HTML.
      */
     public function get_content() {
-        global $OUTPUT;
+        global $OUTPUT, $PAGE;
 
         if ($this->content !== null) {
             return $this->content;
@@ -59,7 +59,7 @@ class block_header extends block_base {
         $this->content->footer = '';
 
         $data = [
-            'title' => !empty($this->config->title) ? $this->config->title : 'Default Header Title',
+            'title' => format_string($PAGE->category->name) ?? 'default title',
             'description' => !empty($this->config->description) ? $this->config->description : 'Default Header Description',
         ];
 

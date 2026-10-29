@@ -28,11 +28,6 @@ class block_header_edit_form extends block_edit_form {
         // Section header title according to language file.
         $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
 
-        // Header title
-        $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_header'));
-        $mform->setDefault('config_title', 'default value');
-        $mform->setType('config_title', PARAM_TEXT);
-
         // Header description
         $mform->addElement('textarea', 'config_description', get_string('blockdescription', 'block_header'));
         $mform->setDefault('config_description', 'default value');
