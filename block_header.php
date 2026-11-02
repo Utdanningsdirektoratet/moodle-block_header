@@ -84,6 +84,22 @@ class block_header extends block_base {
             'illustration' => $illustration
         ];
 
+        // background color
+        $backgrounds = [
+            'blue' => '#BED5E8',
+            'green' => '#76C69D',
+            'brown' => '#E5CEAE',
+        ];
+        $choice = $this->config->background ?? 'blue';
+        if ($choice === 'custom') {
+            $hex = $this->config->backgroundhex ?? '#ffffff';
+            $data['background'] = preg_match('/^#[0-9a-fA-F]{6}$/', $hex)
+                ? $hex
+                : '#ffffff';
+        } else {
+            $data['background'] = $backgrounds[$choice] ?? $backgrounds['blue'];
+        }
+
         $this->content->text = $OUTPUT->render_from_template('block_header/content', $data);
 
         $this->content->text .= '<script>

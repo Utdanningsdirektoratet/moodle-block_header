@@ -25,9 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2026102906;
+$plugin->version = 2026110200;
 $plugin->requires = 2026042000; // Moodle 5.2
 $plugin->supported = [502, 502]; // Not tested on anything before Moodle 5.2
 $plugin->component = 'block_header';
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->release = 'v0.12.0-prealpha';
+$plugin->maturity = MATURITY_BETA;
+$plugin->release = 'v0.1.0-beta.1';

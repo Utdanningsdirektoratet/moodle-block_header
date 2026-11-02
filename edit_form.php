@@ -54,6 +54,29 @@ class block_header_edit_form extends block_edit_form {
             null,
             $this->filemanager_options()
         );
+
+        // Background color
+        $mform->addElement(
+            'select',
+            'config_background',
+            get_string('background', 'block_header'),
+            [
+                'blue'   => get_string('backgroundblue', 'block_header'),
+                'green'  => get_string('backgroundgreen', 'block_header'),
+                'brown'   => get_string('backgroundbrown', 'block_header'),
+                'custom' => get_string('backgroundcustom', 'block_header'),
+            ]
+        );
+        $mform->setDefault('config_background', 'blue');
+        $mform->addElement(
+            'text',
+            'config_backgroundhex',
+            get_string('backgroundhex', 'block_header'),
+            ['placeholder' => '#RRGGBB', 'size' => 7]
+        );
+        $mform->setType('config_backgroundhex', PARAM_RAW_TRIMMED);
+        $mform->setDefault('config_backgroundhex', '#ffffff');
+        $mform->hideIf('config_backgroundhex', 'config_background', 'neq', 'custom'); // Hide custom color if not selected in dropdown
     }
 
     /**
