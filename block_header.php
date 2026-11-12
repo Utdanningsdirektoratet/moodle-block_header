@@ -86,9 +86,9 @@ class block_header extends block_base {
 
         // background color
         $backgrounds = [
-            'blue' => '#BED5E8',
-            'green' => '#76C69D',
-            'brown' => '#E5CEAE',
+            'blue' => '#EEF4F9',
+            'green' => '#EAF6F0',
+            'brown' => '#F9F3EB',
         ];
         $choice = $this->config->background ?? 'blue';
         if ($choice === 'custom') {
