@@ -61,7 +61,7 @@ class block_header extends block_base {
         $context = context_block::instance($this->instance->id);
 
         // fetch the uploaded illustration from storage
-        $illustration = 's';
+        $illustration = '';
         $fs = get_file_storage();
         $files = $fs->get_area_files($context->id, 'block_header', 'content', 0, 'itemid, filepath, filename', false);
         foreach ($files as $file) {
